@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn_enter_function"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/enter_function"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_count"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="@+id/et_count"
+        app:layout_constraintTop_toBottomOf="@+id/funMin" />
+
     <TextView
         android:id="@+id/funMax"
         android:layout_width="wrap_content"
@@ -14,7 +28,6 @@
         android:text="@string/search_max"
         android:textColor="@color/red"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,89 +44,77 @@
         app:layout_constraintStart_toStartOf="@+id/funMax"
         app:layout_constraintTop_toBottomOf="@+id/funMax" />
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/chart"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/funMax"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:background="@color/purple_500"
+        android:backgroundTint="#E75F5F"
+        android:ems="10"
+        android:inputType=""
+        android:hint="@string/zero"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_chart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_chart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
-
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/editTextText"
+        android:id="@+id/et_function"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/purple_500"
+        android:backgroundTint="#E75F5F"
         android:ems="10"
-        android:hint="@string/for_min"
-        android:inputType="number"
-        android:text="@string/zero"
+        android:inputType=""
+        android:hint="@string/enter_fun"
         android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/et_count"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/funMin" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_x"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
         android:text="@string/minX"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_chart"
-        tools:ignore="SmallSp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="@string/enter_cd"
-        android:textSize="10sp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_coordinate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_chart" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minY"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/btn_chart"
+        app:layout_constraintTop_toTopOf="@+id/btn_y"
         tools:ignore="SmallSp" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_coordinate"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:text="@string/maxY"
-        android:textSize="10sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/enter_cd"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        tools:ignore="SmallSp" />
+        app:layout_constraintEnd_toEndOf="@+id/et_count"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="@+id/et_count"
+        app:layout_constraintTop_toBottomOf="@+id/funMin"
+        app:layout_constraintVertical_bias="0.624" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btn_y"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/maxX"
-        android:textSize="10sp"
+        android:backgroundTint="@color/red"
+        android:text="@string/minY"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/btn_coordinate"
+        app:layout_constraintStart_toStartOf="@+id/btn_coordinate"
+        app:layout_constraintTop_toBottomOf="@+id/btn_coordinate"
         tools:ignore="SmallSp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
