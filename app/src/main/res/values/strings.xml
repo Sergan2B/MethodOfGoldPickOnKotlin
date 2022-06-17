@@ -5,9 +5,8 @@
     <string name="add_chart">Построить график</string>
     <string name="for_min">Для минимума</string>
     <string name="zero">0</string>
-    <string name="minX">Значение x (min)</string>
+    <string name="minX">Значение x</string>
     <string name="enter_cd">Ввести кординаты</string>
-    <string name="minY">Значение y (min)</string>
-    <string name="maxY">Значение y (max)</string>
-    <string name="maxX">Значение x (max)</string>
+    <string name="minY">Значение y</string>
+    <string name="enter_coor">Введите координаты</string>
 </resources>
